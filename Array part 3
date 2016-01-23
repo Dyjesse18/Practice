@@ -1,0 +1,25 @@
+/**
+*This program will demonstrate passing indivisual array
+*elements as arguements to a method
+*/
+
+public class PassElements
+{
+  public static void main(String[] args)
+  {
+    int[] numbers = {5, 10, 15, 20, 25, 30, 35, 40 };
+    
+    for(int index = 0; index <numbers.length; index++)
+      showValue(numbers[index]);
+  }//end of main method
+  
+  /**
+  *the showValue method displays its arguement.
+  *@param n The value to display
+  */
+  
+  public static void showValue(int n)
+  {
+    System.out.print(n + " ");
+  }
+}//end of public class PassElements
