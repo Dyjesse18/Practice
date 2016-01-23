@@ -9,11 +9,35 @@ public class arrayTest1
 {
   public static void main(Strig[]args)
   {
+    //variables
+    double playf= 0;
+    double players = 0;
+    
+    //scanner
     Scanner SC = new Scanner(System.in);
+    
+    //propts user to enter number of players
     System.out.println("How many players are there");
-    playf = SC.nextInt();
-    final int players = playf;
-    int[] games = new int[players];
-    System.out.println("Please enter
+    playf = SC.nextDouble();
+    
+    //initalizes array for number of players
+    players = new double[playf];
+    
+    //prompts user to enter number of games for each player
+    System.out.println("Please enter the number of games each player has");
+    
+    //to get the indivisual amount of games per player
+    for(double index = 0; index < players.length; index++)
+    {
+      System.out.print("Enter number of games" + (index +1) + ":");
+      players[index] = SC.nextDouble();
+    }//end of get amount of games for loop
+    
+    //display all games for each player
+    System.out.println();
+    System.out.println("Here are the amount of games per player");
+    for( double index = 0; index < players.length; index++)
+      System.out.println(players[index] + "    ");
+    
   }// end of public static void main
 }//end of arrayTest1
