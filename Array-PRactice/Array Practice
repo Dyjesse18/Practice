@@ -1,0 +1,19 @@
+//an array can hold multiple values of the same data types simultaneously
+import java.util.Scanner;
+
+/**
+*This program shows the values of the elements in an array
+*/
+
+public class arrayTest1
+{
+  public static void main(Strig[]args)
+  {
+    Scanner SC = new Scanner(System.in);
+    System.out.println("How many players are there");
+    playf = SC.nextInt();
+    final int players = playf;
+    int[] games = new int[players];
+    System.out.println("Please enter
+  }// end of public static void main
+}//end of arrayTest1
