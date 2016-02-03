@@ -28,7 +28,7 @@ public class Gui
                 
                 
                 //6.Creates a layout object
-                JF.setLayout(new FlowLayout(FlowLayout.CENTER));
+                //JF.setLayout(new FlowLayout(FlowLayout.CENTER));
                 
                 //7.defines the layout
                 JF.setLayout( new GridBagLayout( 2, 2, 50, 10 ) );
@@ -49,5 +49,13 @@ public class Gui
                 //12.Defines Constaints
                 c.weightx = 0.0;
                 c.gridwidth = GridBagConstraints.RELATIVE;
+                
+                myLable = new JLable("Hi");
+                
+                layoutt.setConstraints(myLable, c);
+                
+                JF.add(myLable);
+                
+                
         }//main end
 }//Gui end
