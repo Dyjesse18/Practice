@@ -4,7 +4,7 @@
 //events can occur at anytime
 //use actionPerformed() method with JButton
 //events without listeners will be IGNORED, a common bug
-//
+//MAKE SURE YOU HAVE A LISTENER FOR EACH ACTION
 
 public class Gui
 {
@@ -40,5 +40,13 @@ public class Gui
                 
                 //10.Creates GridBag constraint
                 GridBagConstraints c = new GridBagConstraints();
+                
+                
+                //11.General Constraint
+                c.fill = GridBagConstraints.BOTH;
+                
+                //12.Defines Constaints
+                c.weightx = 0.0;
+                c.gridwidth = GridBagConstraints.RELATIVE;
         }//main end
 }//Gui end
