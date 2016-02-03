@@ -1,0 +1,20 @@
+//1.Notes
+//event-Driven Programming
+//program will contain code to respond to events
+//events can occur at anytime
+
+public class Gui
+{
+        public static void main(String[] args)
+        {
+                //2.Creates Window
+                JFrame JF = new JFrame("Gui");
+                
+                //3.Able to close window
+                JF.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                
+                
+                //4.Makes window visible
+                JF.setVisible( true );
+        }//main end
+}//Gui end
