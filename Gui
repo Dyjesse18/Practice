@@ -3,6 +3,8 @@
 //program will contain code to respond to events
 //events can occur at anytime
 //use actionPerformed() method with JButton
+//events without listeners will be IGNORED, a common bug
+//
 
 public class Gui
 {
@@ -10,7 +12,7 @@ public class Gui
         {
         
                 //2.Variables
-                static GridLayout layout;
+                static GridBagLayout layout;
                 
                 
                 //3.Creates Window
@@ -28,12 +30,15 @@ public class Gui
                 JF.setLayout(new FlowLayout(FlowLayout.CENTER));
                 
                 //7.defines the layout
-                JF.setLayout( new GridLayout( 2, 2, 50, 10 ) );
+                JF.setLayout( new GridBagLayout( 2, 2, 50, 10 ) );
                 
-                //8.creates Grid Layout
-                layout = new GridLayout();
+                //8.creates GridBag Layout
+                layout = new GridBagLayout();
                 
                 //9.Sets the defined layout into action
                 JF.setLayout( layout );
+                
+                //10.Creates GridBag constraint
+                GridBagConstraints c = new GridBagConstraints();
         }//main end
 }//Gui end
