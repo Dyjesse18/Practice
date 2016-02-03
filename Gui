@@ -5,6 +5,7 @@
 //use actionPerformed() method with JButton
 //events without listeners will be IGNORED, a common bug
 //MAKE SURE YOU HAVE A LISTENER FOR EACH ACTION
+//
 
 public class Gui
 {
