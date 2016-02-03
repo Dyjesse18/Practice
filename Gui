@@ -2,19 +2,38 @@
 //event-Driven Programming
 //program will contain code to respond to events
 //events can occur at anytime
+//use actionPerformed() method with JButton
 
 public class Gui
 {
         public static void main(String[] args)
         {
-                //2.Creates Window
+        
+                //2.Variables
+                static GridLayout layout;
+                
+                
+                //3.Creates Window
                 JFrame JF = new JFrame("Gui");
                 
-                //3.Able to close window
+                //4.Able to close window
                 JF.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 
                 
-                //4.Makes window visible
+                //5.Makes window visible
                 JF.setVisible( true );
+                
+                
+                //6.Creates a layout object
+                JF.setLayout(new FlowLayout(FlowLayout.CENTER));
+                
+                //7.defines the layout
+                JF.setLayout( new GridLayout( 2, 2, 50, 10 ) );
+                
+                //8.creates Grid Layout
+                layout = new GridLayout();
+                
+                //9.Sets the defined layout into action
+                JF.setLayout( layout );
         }//main end
 }//Gui end
