@@ -1,0 +1,94 @@
+//Turn the game of 21 to a Gui application
+//1.button for roll dice
+//2.Button Dont roll dice
+//3.Determine the Winner
+
+public class GameofTwentyone
+{
+  public staic void main(String[] args)
+  {
+    //variables
+    static JLabel myLabel;
+    static JLable myLable2;
+    static JButton myButton;
+    static JButton myButton2;
+    static GridBagLayout layout;
+    int pn = 0;
+    int cn = 0;
+    
+    
+        JFrame myFrame = new JFrame("Game of 21");
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.setVisible( true );
+        myFrame.setLayout( new GridLayout( 2, 2, 50, 10 ) );
+        layout = new GridBagLayout();
+        myFrame.setLayout( layout );
+        
+        
+        GridBagConstraints c = new GridBagConstraints();
+        // general constraints
+        c.fill = GridBagConstraints.BOTH;
+        
+        // label constraints
+        c.weightx = 0.0;
+        c.gridwidth = GridBagConstraints.RELATIVE;
+        
+        
+        
+        //lable1
+        myLabel = new JLabel("Your roll sum is:"+ pn);
+        myLabel.setForeground(Color.BLUE);
+        myLabel.setFont(new Font("TimesRoman", Font.BOLD, 24));
+        layout.setConstraints( myLabel, c );
+        myFrame.add(myLabel);
+        
+        
+        myLable2= new JLable("The computers roll sum is: "+cn);
+        myLabel2.setForeground(Color.BLUE);
+        myLabel2.setFont(new Font("TimesRoman", Font.BOLD, 24));
+        layout.setConstraints( myLabel2, c );
+        myFrame.add(myLabel2);
+        
+        
+        
+        c.gridwidth = GridBagConstraints.REMAINDER;
+        // makes button
+        myButton = new JButton("Roll die");
+        myButton.setFont(new Font("TimesRoman", Font.ITALIC, 12));
+
+        ActionListener listener = new MyListener();
+        myButton.addActionListener(listener);
+
+        layout.setConstraints( myButton, c);
+        myFrame.add(myButton);
+        
+         myButton2 = new JButton("Roll die");
+        myButton2.setFont(new Font("TimesRoman", Font.ITALIC, 12));
+
+        ActionListener listener = new MyListener();
+        myButton2.addActionListener(listener);
+
+        layout.setConstraints( myButton2, c);
+        myFrame.add(myButton2);
+        
+        myFrame.pack();
+        myFrame.setSize( myFrame.getPreferredSize() );
+  }//main end
+}//end of class
+
+
+static class MyListener implements ActionListener 
+{
+   public void actionPerformed(ActionEvent e) 
+   {
+     JButton eventSource = (JButton)e.getSource();
+     if( source== myButton2)
+     {
+        
+     }//if button2 = source end
+     if(source ==myButton)
+     {
+     
+     }//source == my button end
+   }//end of action performed class
+}//event class end
