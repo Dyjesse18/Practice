@@ -8,13 +8,17 @@ public class GameofTwentyone
   public staic void main(String[] args)
   {
     //variables
-    static JLabel myLabel;
+    static JLabel myLabel1;
     static JLable myLable2;
+    static JLable myLable3;
     static JButton myButton;
     static JButton myButton2;
+    static JButton myButton3;
     static GridBagLayout layout;
     int pn = 0;
     int cn = 0;
+    Random Random = new Random();
+    int x = ran.nextInt(5);
     
     
         JFrame myFrame = new JFrame("Game of 21");
@@ -36,40 +40,81 @@ public class GameofTwentyone
         
         
         //lable1
-        myLabel = new JLabel("Your roll sum is:"+ pn);
-        myLabel.setForeground(Color.BLUE);
-        myLabel.setFont(new Font("TimesRoman", Font.BOLD, 24));
-        layout.setConstraints( myLabel, c );
-        myFrame.add(myLabel);
+        myLabel1 = new JLabel("Your roll sum is:"+ pn);
+        myLabel1.setForeground(Color.BLUE);
+        myLabel1.setFont(new Font("TimesRoman", Font.BOLD, 24));
+        layout.setConstraints( myLabel1, c );
+        myFrame.add(myLabel1);
         
-        
+        //lable2
         myLable2= new JLable("The computers roll sum is: "+cn);
         myLabel2.setForeground(Color.BLUE);
         myLabel2.setFont(new Font("TimesRoman", Font.BOLD, 24));
         layout.setConstraints( myLabel2, c );
         myFrame.add(myLabel2);
         
+        boolean Flag1 = false;
+        while(Flag1==true)
+        {
+          //lable 3
+          if(pn>21||cn==21)
+          {
+            myLable3 = new JLable("You lost to the computer");
+            myLabel3.setForeground(Color.BLUE);
+            myLabel3.setFont(new Font("TimesRoman", Font.BOLD, 24));
+            layout.setConstraints( myLabel3, c );
+            myFrame.add(myLabel3);
+            pn= 0;
+            cn=0;
+          }//myLable3 end
         
+        
+          //Lable4 
+          if(cn>21||pn==21)
+          {
+            myLable4 = new JLable("You beat the computer");
+            myLabel4.setForeground(Color.BLUE);
+            myLabel4.setFont(new Font("TimesRoman", Font.BOLD, 24));
+            layout.setConstraints( myLabel4, c );
+            myFrame.add(myLabe4);
+            pn= 0;
+            cn=0;
+          }//myLable4 end
+        }//WHILE FLAG1 =TRUE  
         
         c.gridwidth = GridBagConstraints.REMAINDER;
         // makes button
         myButton = new JButton("Roll die");
         myButton.setFont(new Font("TimesRoman", Font.ITALIC, 12));
 
-        ActionListener listener = new MyListener();
-        myButton.addActionListener(listener);
+        ActionListener listener1 = new MyListener();
+        myButton.addActionListener(listener1);
 
         layout.setConstraints( myButton, c);
         myFrame.add(myButton);
         
-         myButton2 = new JButton("Roll die");
+        
+        //button2
+        myButton2 = new JButton("Stay on your number");
         myButton2.setFont(new Font("TimesRoman", Font.ITALIC, 12));
 
-        ActionListener listener = new MyListener();
-        myButton2.addActionListener(listener);
+        ActionListener listener2 = new MyListener();
+        myButton2.addActionListener(listener2);
 
         layout.setConstraints( myButton2, c);
         myFrame.add(myButton2);
+        
+        
+        myButton3 = new JButton("Close System");
+        myButton3.setFont(new Font("TimesRoman", Font.ITALIC, 12));
+
+        ActionListener listener3 = new MyListener();
+        myButton3.addActionListener(listener3);
+
+        layout.setConstraints( myButton3, c);
+        myFrame.add(myButton3);
+        
+        
         
         myFrame.pack();
         myFrame.setSize( myFrame.getPreferredSize() );
@@ -84,11 +129,23 @@ static class MyListener implements ActionListener
      JButton eventSource = (JButton)e.getSource();
      if( source== myButton2)
      {
-        
+        pn = pn + x;
+        if(cn<17)
+        {
+          cn= cn + x;
+        }//computer number lower than 17
+        if(cn>=17)
+        {
+          cn = cn+0;
+        }computer number>17
      }//if button2 = source end
-     if(source ==myButton)
+     if(source ==myButton1)
      {
-     
+        Flag1=true;
      }//source == my button end
+     if(source==mybutton3)
+     {
+      system.exit;
+     }//end game
    }//end of action performed class
 }//event class end
