@@ -68,7 +68,7 @@ public class Layout Test extends JFrame implements ActionListener {
                                 outputLabel.setText("Blaahhhhh3");
                                 break;
                         default:
-                                JOptionPane.showMessageDialog( this, "gvybbhujbu" );
+                                JOptionPane.showMessageDialog( this, "WHERE ARE YOU! THIS DOESNT EXIST!OH GOD HOW DID YOU GET HERE" );
                                 break;
                 }//end of switch
                 
