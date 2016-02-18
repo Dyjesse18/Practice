@@ -21,13 +21,13 @@ public class Layout Test extends JFrame implements ActionListener {
                 mainPanel = new JPanel();
                 buttonPanel = new JPanel();
                 
-                buttonPanel.setLayout( new GridLayout(4 , 8) );
+                buttonPanel.setLayout( new GridLayout(1 , 3) );
                 button = new JButton( "One" );
                 button.setActionCommand( " One " );
                 button.addActionCommand( this );
                 buttonPanel.add( button );
                 
-                button = new JButton( "two" );
+                button = new JButton( "Two" );
                 button.setActionCommand( " Two " );
                 button.addActionCommand( this );
                 buttonPanel.add( button );
@@ -44,6 +44,7 @@ public class Layout Test extends JFrame implements ActionListener {
                 mainPanel.add( label );
                 
                 outputLabel = newJLabel();
+                outputLabel.setPreferredSize(new Dimension(150, 15) );
                 mainPanel.add( outputLabel );
                 
                 add( mainPanel, BorderLayout.CENTER );
@@ -70,6 +71,7 @@ public class Layout Test extends JFrame implements ActionListener {
                                 JOptionPane.showMessageDialog( this, "gvybbhujbu" );
                                 break;
                 }//end of switch
+                
         }//end of action performed
         
         
